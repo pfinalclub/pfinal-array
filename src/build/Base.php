@@ -215,4 +215,54 @@ class Base
         return $max_depth;
     }
 
+    /**
+     * 数组中指定的一列
+     * @param $array
+     * @param $columnKey
+     * @param null $indexKey
+     * @return array
+     */
+    public function pf_array_col($array, $columnKey, $indexKey = null)
+    {
+        $result = array();
+        if(!empty($array)) {
+            if (!function_exists('array_column')) {
+                foreach ($array as $val) {
+                    if (!is_array($val)) {
+                        continue;
+                    } elseif (is_null($indexKey) && array_key_exists($columnKey, $val)) {
+                        $result[] = $val[$columnKey];
+                    } elseif (array_key_exists($indexKey, $val)) {
+                        if (is_null($columnKey)) {
+                            $result[$val[$indexKey]] = $val;
+                        } elseif (array_key_exists($columnKey, $val)) {
+                            $result[$val[$indexKey]] = $val[$columnKey];
+                        }
+                    }
+                }
+            } else {
+                $result = array_column($array, $columnKey, $indexKey);
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * 对象转换成数组
+     * @param $obj
+     * @return array
+     */
+    public static function pf_obj_arr($obj)
+    {
+        $arr = is_object($obj) ? get_object_vars($obj) : $obj;
+        if (is_array($arr)) {
+            return array_map(array(
+                __CLASS__,
+                __FUNCTION__
+            ), $arr);
+        } else {
+            return $arr;
+        }
+    }
+
 }
