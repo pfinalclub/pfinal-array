@@ -175,7 +175,7 @@ class Base
      * @return array
      */
     public function pf_array_unique($arr) {
-        $dime = array_depth($arr);
+        $dime = $this->array_depth($arr);
         if($dime <= 1) {
             $data =array_unique($arr);
         } else {
