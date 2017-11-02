@@ -183,7 +183,7 @@ class Base
             $new_data=[];
             foreach ($arr as $key=>$v) {
                 if(is_array($v)) {
-                    $new_data = pf_array_unique($v);
+                    $new_data =$this->pf_array_unique($v);
                 } else {
                     $temp[$key]=$v;
                 }
