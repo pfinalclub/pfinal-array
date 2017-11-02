@@ -7,11 +7,12 @@
             "email": "Lampxiezi@163.com"
         }
     ],
+    "license": "MIT",
     "keywords": [
         "pfinal",
         "小九",
         "Q哥",
-        "array"
+        "php-array"
     ],
     "homepage": "https://neroxiezi.github.io/",
     "require": {
