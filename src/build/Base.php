@@ -4,6 +4,7 @@ namespace pf\arr\build;
 
 class Base
 {
+    use PFArrFormat;
 
     /**
      * 数组合并

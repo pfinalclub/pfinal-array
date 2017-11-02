@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/Downloads-4k-red.svg)](https://packagist.org/packages/nancheng/pfinal-array)
 
 
-**Note:** ```PHP``` ```Parameter``` ```Validator```
+**Note:** ```PHP``` ```PHPArray``` ```Validator```
 
 这是一个PHP数组操作中间件,对 PHP 数组的常用操作进行封装
 目前包括以下方法：
@@ -17,6 +17,8 @@
 - getTree()     多级数组结构化(不递归)
 - pf_array_unique()  多维数组去重 
 - array_depth()  检测数组的维度
+
+- pf_encode()  数据格式转换
 
 
 ## 安装
