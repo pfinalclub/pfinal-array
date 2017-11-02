@@ -2,7 +2,6 @@
 namespace pf\arr\build;
 
 trait PFArrFormat {
-    public $type;
     public $rootNodeName='root';
     public $type_func=array(
         'json'=>'format_json',
@@ -10,16 +9,13 @@ trait PFArrFormat {
         'serialize'=>'format_serialize',
         'obj'      =>'format_obj'
     );
-    public function __construct($type='json') {
-        $this->type = $type;
-    }
 
-    public function pf_encode($array) {
-        if(method_exists($this, $this->type_func[$this->type])) {
-            return call_user_func(array($this,$this->type_func[$this->type]), $array);
+    public function pf_encode($array,$type='json') {
+        if(method_exists($this, $this->type_func[$type])) {
+            return call_user_func(array($this,$this->type_func[$type]), $array);
         }
         else{
-            throw new Exception(sprintf('The required method "'.$this->type_func[$this->type].'" does not exist for!', $this->type_func[$this->type], get_class($this)));
+            throw new Exception(sprintf('The required method "'.$this->type_func[$type].'" does not exist for!', $this->type_func[$type], get_class($this)));
         }
     }
 
