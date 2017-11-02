@@ -1,7 +1,172 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 运营部
- * Date: 2017/11/2
- * Time: 12:59
- */
+
+namespace pf\arr\build;
+
+class Base
+{
+
+    /**
+     * 数组合并
+     * @param $arr
+     * @param $res
+     * @return array
+     */
+    public function pf_merge($arr, $res)
+    {
+        $res = is_array($res) ? $res : [];
+        foreach ($arr as $k => $v) {
+            $res[$k] = isset($res[$k]) ? $res[$k] : $v;
+            $res[$k] = is_array($res[$k]) ? $this->merge($v, $res[$k]) : $res[$k];
+        }
+        return $res;
+    }
+
+    /**
+     * 移除数组中的某个值 获取新数组
+     * @param array $data
+     * @param array $values
+     * @return array
+     */
+    public function del_val(array $data, array $values)
+    {
+        $news = [];
+        foreach ($data as $key => $v) {
+            if (!in_array($v, $values)) {
+                $news[$key] = $v;
+            }
+        }
+        return $news;
+    }
+
+    /**
+     * 根据建明获取值
+     * @param array $data
+     * @param $key
+     * @param null $value
+     * @return array|mixed|null
+     */
+    public function get(array $data, $key, $value = null)
+    {
+        $exp = explode('.', $key);
+        foreach ((array)$exp as $d) {
+            if (isset($data[$d])) {
+                $data = $data[$d];
+            } else {
+                return $value;
+            }
+        }
+        return $data;
+    }
+
+    /**
+     * 不区分大小写 检测数据数据键名
+     * @param $key
+     * @param $arr
+     * @return bool
+     */
+    public function keyExists($key, $arr)
+    {
+        return array_key_exists(strtolower($key), $this->keyExists($arr));
+    }
+
+    /**
+     * 根据下标过滤数据元素
+     *
+     * @param array $data 原数组数据
+     * @param       $keys 参数的下标
+     * @param int $type 1 存在在$keys时过滤  0 不在时过滤
+     *
+     * @return array
+     */
+    public function filterKeys(array $data, $keys, $type = 1)
+    {
+        $tmp = $data;
+        foreach ($data as $k => $v) {
+            if ($type == 1) {
+                //存在时过滤
+                if (in_array($k, $keys)) {
+                    unset($tmp[$k]);
+                }
+            } else {
+                //不在时过滤
+                if (!in_array($k, $keys)) {
+                    unset($tmp[$k]);
+                }
+            }
+        }
+        return $tmp;
+    }
+
+    /**
+     * 数组排序
+     * @param $arr
+     * @return mixed
+     */
+    public function pf_arr_sort($arr)
+    {
+        $len = count($arr);
+        for ($i = 1; $i < $len; $i++) {
+            for ($k = 0; $k < $len - $i; $k++) {
+                if ($arr[$k] > $arr[$k + 1]) {
+                    $tmp = $arr[$k + 1];
+                    $arr[$k + 1] = $arr[$k];
+                    $arr[$k] = $tmp;
+                }
+            }
+        }
+        return $arr;
+    }
+
+    /**
+     * 二级获取树形结构
+     * @param $list
+     * @param int $parent_id
+     * @return array
+     */
+    public function tree($list,$parent_id=0) {
+        $arr = [];
+        $tree= [];
+        foreach ($list as $value) {
+            $arr[$value['parent_id']][]=$value;
+        }
+
+        foreach ($arr[$parent_id] as $key=>$val) {
+            $tree[$key][] = $val;
+            foreach ($arr[$val['id']] as $v) {
+                $tree[$key]['son'][]=$v;
+            }
+        }
+        return $tree;
+    }
+
+    /**
+     * 多级获取树形结构
+     * @param $list
+     * @param int $parent_id
+     * @return array
+     */
+    function getTree($list, $parent_id = 0) {
+        $tree = [];
+        if (!empty($list)) {
+            //先修改为以id为下标的列表
+
+            $newList = [];
+
+            foreach ($list as $k => $v) {
+                $newList[$v['id']] = $v;
+            }
+            //然后开始组装成特殊格式
+            foreach ($newList as $value) {
+
+                if ($parent_id == $value['parent_id']) {//先取出顶级
+                    $tree[] = &$newList[$value['id']];
+                } elseif (isset($newList[$value['parent_id']])) {
+                    //再判定非顶级的pid是否存在，如果存在，则再pid所在的数组下面加入一个字段items，来将本身存进去
+                    $newList[$value['parent_id']]['items'][] = &$newList[$value['id']];
+
+                }
+            }
+        }    return $tree;
+    }
+
+}
