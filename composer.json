@@ -1,0 +1,16 @@
+{
+    "name": "xiaoq/arr",
+    "description": "This is a PHP array manipulation middleware",
+    "authors": [
+        {
+            "name": "小九",
+            "email": "Lampxiezi@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "pf\\arr\\": "src/"
+        }
+    }
+}
