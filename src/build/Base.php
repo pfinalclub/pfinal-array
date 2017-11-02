@@ -252,7 +252,7 @@ class Base
      * @param $obj
      * @return array
      */
-    public static function pf_obj_arr($obj)
+    public  function pf_obj_arr($obj)
     {
         $arr = is_object($obj) ? get_object_vars($obj) : $obj;
         if (is_array($arr)) {
@@ -263,6 +263,22 @@ class Base
         } else {
             return $arr;
         }
+    }
+
+    /**
+     * 结构化打印数组
+     * @param $arr
+     * @param int $type
+     */
+    public function dd($arr,$type=1) {
+        echo '<pre>';
+        if($type==1) {
+            print_r($arr);
+        } else {
+            var_dump($arr);
+        }
+        echo '</pre>';
+        exit;
     }
 
 }
