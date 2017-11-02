@@ -1,5 +1,15 @@
 # pfinal-array
 
+[![Source Code][badge-source]][source]
+[![Latest Version][badge-release]][release]
+[![Software License][badge-license]][license]
+[![Build Status][badge-build]][build]
+[![Scrutinizer][badge-quality]][quality]
+[![Coverage Status][badge-coverage]][coverage]
+[![Total Downloads][badge-downloads]][downloads]
+
+
+
 这是一个PHP数组操作中间件,对 PHP 数组的常用操作进行封装
 目前包括以下方法：
 
