@@ -1,7 +1,7 @@
 # pfinal-array
 
 ![](https://img.shields.io/apm/l/vim-mode.svg)
-[![Total Downloads][ico-downloads]][link-downloads]
+[![](https://img.shields.io/badge/Downloads-4k-red.svg)](https://packagist.org/packages/nancheng/pfinal-array)
 
 
 **Note:** ```PHP``` ```Parameter``` ```Validator```
