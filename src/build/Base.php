@@ -169,4 +169,50 @@ class Base
         }    return $tree;
     }
 
+    /**
+     * 数组去重
+     * @param $arr
+     * @return array
+     */
+    public function pf_array_unique($arr) {
+        $dime = array_depth($arr);
+        if($dime <= 1) {
+            $data =array_unique($arr);
+        } else {
+            $temp=[];
+            $new_data=[];
+            foreach ($arr as $key=>$v) {
+                if(is_array($v)) {
+                    $new_data = pf_array_unique($v);
+                } else {
+                    $temp[$key]=$v;
+                }
+            }
+            $data=array_unique($temp);
+            array_push($data,$new_data);
+        }
+        return $data;
+    }
+
+
+    /**
+     * 检测数组的维度
+     * @param $array
+     * @return int
+     */
+    public function array_depth($array) {
+        if(!is_array($array)) return 0;
+        $max_depth = 1;
+        foreach ($array as $value) {
+            if (is_array($value)) {
+                $depth = array_depth($value) + 1;
+
+                if ($depth > $max_depth) {
+                    $max_depth = $depth;
+                }
+            }
+        }
+        return $max_depth;
+    }
+
 }
