@@ -7,10 +7,24 @@
             "email": "Lampxiezi@163.com"
         }
     ],
-    "require": {},
+    "keywords": [
+        "pfinal",
+        "小九",
+        "Q哥",
+        "array"
+    ],
+    "homepage": "https://neroxiezi.github.io/",
+    "require": {
+        "php": ">=5.4.0"
+    },
     "autoload": {
         "psr-4": {
             "pf\\arr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "example\\": "example"
         }
     }
 }
