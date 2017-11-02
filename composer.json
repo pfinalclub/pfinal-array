@@ -4,9 +4,11 @@
     "authors": [
         {
             "name": "小九",
-            "email": "Lampxiezi@163.com"
+            "email": "Lampxiezi@163.com",
+            "homepage": "https://neroxiezi.github.io/"
         }
     ],
+    "homepage":"https://github.com/Neroxiezi/pfinal-array",
     "license": "MIT",
     "keywords": [
         "pfinal",
@@ -14,7 +16,7 @@
         "Q哥",
         "php-array"
     ],
-    "homepage": "https://neroxiezi.github.io/",
+
     "require": {
         "php": ">=5.4.0"
     },

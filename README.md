@@ -1,6 +1,10 @@
 # pfinal-array
 
 ![](https://img.shields.io/apm/l/vim-mode.svg)
+[![Total Downloads][ico-downloads]][link-downloads]
+
+
+**Note:** ```PHP``` ```Parameter``` ```Validator```
 
 这是一个PHP数组操作中间件,对 PHP 数组的常用操作进行封装
 目前包括以下方法：
