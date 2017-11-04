@@ -20,6 +20,11 @@
 
 - pf_encode()  数据格式转换
 
+- pf_array_flatten() 将多维折叠数组变为一维
+- pf_is_list() 判断PHP数组是否索引数组
+
+- pf_array_rand_by_weight() 根据权重获取随机区间返回ID
+
 
 ## 安装
 
