@@ -265,8 +265,112 @@ class Base
             return $arr;
         }
     }
-
-    /**
+	
+	/**
+	 * 将多维折叠数组变为一维
+	 *
+	 * @param array $values     多维数组
+	 * @param bool $drop_empty  去掉为空的值
+	 * @return array
+	 */
+	public function pf_array_flatten(array $values, $drop_empty = false)
+	{
+		$result = [];
+		array_walk_recursive($values, function($value)
+		use(&$result, $drop_empty) {
+			if (!$drop_empty || !empty($value)) {
+				$result[] = $value;
+			}
+		});
+		return $result;
+	}
+	
+	//判断PHP数组是否索引数组（列表/向量表）
+	
+	public function pf_is_list($arr)
+	
+	{
+		if ( ! is_array($arr) ) {
+			return false;
+		}
+		else if ( empty($arr) ) {
+			return true;
+		}
+		else {
+			$key_is_nums = array_map('is_numeric', array_keys($arr));
+			return array_reduce($key_is_nums, 'and', true);
+		}
+	}
+	
+	/**
+	 
+	 * 根据权重获取随机区间返回ID
+	 
+	 * @param array $array 格式为  array(array('id'=>'','value'=>''),array('id'=>'','value'=>''))   //id为标识,value为权重
+	 
+	 * @return int|string
+	 
+	 */
+	public function pf_array_rand_by_weight($array)
+	{
+		if (!empty($array)) {
+			//区间最大值
+			$sum = 0;
+			//区间数组
+			$interval = array();
+			//制造区间
+			foreach ($array as $value) {
+				
+				$interval[$value['id']]['min'] = $sum + 1;
+				$interval[$value['id']]['max'] = $sum + $value['value'];
+				$sum += $value['value'];
+			}
+			//在区间内随机一个数
+			$result = rand(1, $sum);
+			//获取结果属于哪个区间, 返回其ID
+			
+			foreach ($interval as $id=>$v) {
+				
+				while ($result >= $v['min'] && $result <= $v['max']) {
+					return $id;
+				}
+			}
+		}
+		return 0;
+	}
+	
+	/**
+	 
+	 * 二维数组验证一个值是否存在
+	 
+	 * @param $value
+	 
+	 * @param $array
+	 
+	 * @return bool
+	 
+	 */
+	public function pf_deep_in_array($value, $array) {
+		foreach($array as $item) {
+			if(!is_array($item)) {
+				if ($item == $value) {
+					return true;
+				} else {
+					continue;
+				}
+			}
+			
+			if(in_array($value, $item)) {
+				return true;
+			} else if($this->pf_deep_in_array($value, $item)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	/**
      * 结构化打印数组
      * @param $arr
      * @param int $type
