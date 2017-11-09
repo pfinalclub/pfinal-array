@@ -368,8 +368,51 @@ class Base
 		}
 		return false;
 	}
-	
-	
+
+
+    /**
+     * 随机返回 数组 的值
+     * @param $array
+     * @param int $len
+     * @return array|bool|mixed
+     */
+	public function pf_rand_val($array,$len=1) {
+	    if(!is_array($array)) {
+	        return false;
+        }
+        $keys = array_rand($array, $len);
+        if ($len === 1) {
+            return $array[$keys];
+        }
+        return array_intersect_key($array, array_flip($keys));
+    }
+
+
+    /**
+     * 按权重 随机返回数组的值
+     * Example:$arr = [['dd',1],['ff',2],['cc',3],['ee',4]]; 出现 ee的次数相对于其他的次数要多一点
+     * @param array $array
+     * @return array|bool|mixed
+     */
+    public function pf_rand_weighted(array $array)
+    {
+        if(!is_array($array)) {
+            return false;
+        }
+
+        $options = [];
+        foreach ($array as $weight) {
+            if(!is_array($weight)) {
+                return false;
+            }
+            for ($i = 0; $i < $weight[1]; ++$i) {
+                $options[] = $weight[0];
+            }
+        }
+        return $this->pf_rand_val($options);
+    }
+
+
 	/**
      * 结构化打印数组
      * @param $arr
