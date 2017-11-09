@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/Base.php" afterPath="$PROJECT_DIR$/src/build/Base.php" />
     </list>
@@ -26,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Base.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="391" column="7" lean-forward="true" selection-start-line="391" selection-start-column="7" selection-end-line="391" selection-end-column="19" />
+            <state relative-caret-position="810">
+              <caret line="468" column="0" lean-forward="true" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
               <folding>
                 <element signature="e#5196#6176#0#PHP" expanded="false" />
                 <element signature="e#6253#6557#0#PHP" expanded="false" />
@@ -39,7 +36,10 @@
                 <element signature="e#7415#7953#0#PHP" expanded="false" />
                 <element signature="e#8053#8396#0#PHP" expanded="false" />
                 <element signature="e#8510#8797#0#PHP" expanded="false" />
-                <element signature="e#9488#9692#0#PHP" expanded="false" />
+                <element signature="e#8981#9406#0#PHP" expanded="false" />
+                <element signature="e#9526#9932#0#PHP" expanded="false" />
+                <element signature="e#10067#10656#0#PHP" expanded="false" />
+                <element signature="e#10980#11184#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,19 +48,19 @@
       <file leaf-file-name="1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="37" selection-end-column="2" />
+            <state relative-caret-position="180">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="480">
-                <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <first_editor relative-caret-position="420">
+                <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="20" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -70,15 +70,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pan</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/../../style.css" />
         <option value="$PROJECT_DIR$/../../1.php" />
-        <option value="$PROJECT_DIR$/src/build/Base.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/build/Base.php" />
       </list>
     </option>
   </component>
@@ -89,7 +95,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="24" />
     <option name="y" value="1" />
     <option name="width" value="1920" />
@@ -166,15 +172,15 @@
       <option name="presentableId" value="Default" />
       <updated>1509797748582</updated>
       <workItem from="1509797750906" duration="1219000" />
-      <workItem from="1510194057622" duration="5979000" />
+      <workItem from="1510194057622" duration="11310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7198000" />
+    <option name="totallyTimeSpent" value="12529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -227,7 +233,10 @@
             <element signature="e#7415#7953#0#PHP" expanded="false" />
             <element signature="e#8053#8396#0#PHP" expanded="false" />
             <element signature="e#8510#8797#0#PHP" expanded="false" />
-            <element signature="e#9488#9692#0#PHP" expanded="false" />
+            <element signature="e#8981#9406#0#PHP" expanded="false" />
+            <element signature="e#9526#9932#0#PHP" expanded="false" />
+            <element signature="e#10067#10656#0#PHP" expanded="false" />
+            <element signature="e#10980#11184#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -243,18 +252,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="297" column="9" lean-forward="true" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="37" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="420">
+            <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="391" column="7" lean-forward="true" selection-start-line="391" selection-start-column="7" selection-end-line="391" selection-end-column="19" />
+        <state relative-caret-position="810">
+          <caret line="468" column="0" lean-forward="true" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
           <folding>
             <element signature="e#5196#6176#0#PHP" expanded="false" />
             <element signature="e#6253#6557#0#PHP" expanded="false" />
@@ -263,19 +291,11 @@
             <element signature="e#7415#7953#0#PHP" expanded="false" />
             <element signature="e#8053#8396#0#PHP" expanded="false" />
             <element signature="e#8510#8797#0#PHP" expanded="false" />
-            <element signature="e#9488#9692#0#PHP" expanded="false" />
+            <element signature="e#8981#9406#0#PHP" expanded="false" />
+            <element signature="e#9526#9932#0#PHP" expanded="false" />
+            <element signature="e#10067#10656#0#PHP" expanded="false" />
+            <element signature="e#10980#11184#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="480">
-            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

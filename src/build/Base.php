@@ -394,8 +394,7 @@ class Base
      * @param array $array
      * @return array|bool|mixed
      */
-    public function pf_rand_weighted(array $array)
-    {
+    public function pf_rand_weighted(array $array) {
         if(!is_array($array)) {
             return false;
         }
@@ -412,6 +411,61 @@ class Base
         return $this->pf_rand_val($options);
     }
 
+    /**
+     * 随机打乱数组
+     * @param $array
+     * @param bool $statue  true or  false
+     * @return bool
+     */
+    public function pf_array_shuffle(&$array,$statue = false) {
+        $keys = array_keys($array);
+        shuffle($keys);
+        $new = [];
+        foreach($keys as $key) {
+            if(is_array($array[$key] && $statue)) {
+                $new[$key] = $this->pf_array_shuffle($array[$key],1);
+            }
+            $new[$key] = $array[$key];
+        }
+        $array = $new;
+        return true;
+    }
+
+    /**
+     * 在数组中的给定位置插入元素
+     * @param $array
+     * @param $insert
+     * @param int $position
+     * @return array
+     */
+    public function pf_array_insert($array, $insert, $position=0) {
+        if(!is_array($insert)) {
+            $insert = [$insert];
+        }
+
+        if($position==0) {
+            $array = array_merge($insert, $array);
+        } else {
+            if($position >= (count($array)-1)) {
+                $array = array_merge($array, $insert);
+            } else {
+                $head = array_slice($array, 0, $position);
+                $tail = array_slice($array, $position);
+                $array = array_merge($head, $insert, $tail);
+            }
+        }
+        return $array;
+    }
+
+    /**
+     * 返回两个数组中不同的元素
+     * @param $array
+     * @param $array1
+     * @return array
+     */
+    public function pf_array_diff_both($array,$array1) {
+        return array_merge(array_diff($array,$array1),array_diff($array1,$array));
+    }
 
 	/**
      * 结构化打印数组

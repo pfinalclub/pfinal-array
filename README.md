@@ -15,15 +15,17 @@
 - pf_arr_sort() 数组冒泡排序
 - tree()        二级数组树结构化(不递归)
 - getTree()     多级数组结构化(不递归)
-- pf_array_unique()  多维数组去重 
-- array_depth()  检测数组的维度
-- pf_encode()  数据格式转换
-- pf_array_flatten() 将多维折叠数组变为一维
-- pf_is_list()       判断PHP数组是否索引数组
+- pf_array_unique()   多维数组去重 
+- array_depth()       检测数组的维度
+- pf_encode()         数据格式转换
+- pf_array_flatten()        将多维折叠数组变为一维
+- pf_is_list()              判断PHP数组是否索引数组
 - pf_array_rand_by_weight() 根据权重获取随机区间返回ID
-- pf_rand_val()  随机获取数组中的元素
+- pf_rand_val()      随机获取数组中的元素
 - pf_rand_weighted() 按权重 随机返回数组的值
-
+- pf_array_shuffle() 随机打乱数组(支持多维数组)
+- pf_array_insert()  在数组中的给定位置插入元素
+- pf_array_diff_both()    返回两个数组中不同的元素
 
 ## 安装
 
