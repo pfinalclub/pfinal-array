@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/Base.php" afterPath="$PROJECT_DIR$/src/build/Base.php" />
-    </list>
+    <list default="true" id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="" />
     <ignored path="pfinal-array.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -26,8 +23,8 @@
       <file leaf-file-name="Base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="468" column="0" lean-forward="true" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
+            <state relative-caret-position="130">
+              <caret line="390" column="7" lean-forward="true" selection-start-line="390" selection-start-column="7" selection-end-line="390" selection-end-column="7" />
               <folding>
                 <element signature="e#5196#6176#0#PHP" expanded="false" />
                 <element signature="e#6253#6557#0#PHP" expanded="false" />
@@ -146,7 +143,7 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodeSnippet/pfarray" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -172,12 +169,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509797748582</updated>
       <workItem from="1509797750906" duration="1219000" />
-      <workItem from="1510194057622" duration="11310000" />
+      <workItem from="1510194057622" duration="11940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12529000" />
+    <option name="totallyTimeSpent" value="13159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -281,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="468" column="0" lean-forward="true" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
+        <state relative-caret-position="130">
+          <caret line="390" column="7" lean-forward="true" selection-start-line="390" selection-start-column="7" selection-end-line="390" selection-end-column="7" />
           <folding>
             <element signature="e#5196#6176#0#PHP" expanded="false" />
             <element signature="e#6253#6557#0#PHP" expanded="false" />

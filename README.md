@@ -26,6 +26,8 @@
 - pf_array_shuffle() 随机打乱数组(支持多维数组)
 - pf_array_insert()  在数组中的给定位置插入元素
 - pf_array_diff_both()    返回两个数组中不同的元素
+- pf_getCloud()      返回数组的标签云
+- pf_array_group_by() 按指定的键对数组依次分组
 
 ## 安装
 
@@ -86,6 +88,31 @@
 ```php
 $result = PFarr::pf_array_col($records, 'first_name', 'id');
     print_r($result);
+```
+
+*按指定的键对数组依次分组*
+
+```php
+$records = [
+    [
+        'city'  => '上海',
+        'age'   => 18,
+        'name'  => '马二'
+    ],
+    [
+        'city'  => '上海',
+        'age'   => 20,
+        'name'  => '翠花'
+    ]
+];
+
+//按照 city 分组 
+$arr = PFarr::pf_array_group_by($records,'city');
+
+//按照 city 分组 完成 之后 再按照  age 分组
+   
+$arr1 = PFarr::pf_array_group_by($records,'city','age');
+
 ```
 
 ### 其他

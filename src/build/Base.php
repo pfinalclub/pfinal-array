@@ -467,6 +467,64 @@ class Base
         return array_merge(array_diff($array,$array1),array_diff($array1,$array));
     }
 
+    /**
+     * 获取指定数组的标签云
+     * @param array $data
+     * @param int $minFontSize
+     * @param int $maxFontSize
+     * @return string
+     */
+    public function pf_getCloud( $data = array(), $minFontSize = 12, $maxFontSize = 30 ) {
+        $minimumCount = min( array_values( $data ) );
+        $maximumCount = max( array_values( $data ) );
+        $spread = $maximumCount - $minimumCount;
+        $cloudTags = array();
+        $spread == 0 && $spread = 1; // 假如等于0，则强制为1
+        foreach ($data as $tag => $count) {
+            $color = 'rgb('.rand(0,255).','.rand(0,255).','.rand(0,255).')';
+            $size = $minFontSize + ( $count - $minimumCount ) * ( $maxFontSize - $minFontSize ) / $spread;
+            $cloudTags[] = '<a style="display:block;margin-left:10px;margin-top:'.rand(-5,5).'px;float:left;color:'.$color.';text-decoration:none;font-size: ' . floor( $size ) . 'px' . '" href="#" title="' . $tag  .'' . $count . '">'. htmlspecialchars( stripslashes( $tag ) ) . '</a>';
+        }
+
+        return join( "", $cloudTags );
+    }
+
+    /**
+     * 按指定的键对数组依次分组
+     * @param array $arr
+     * @param $key
+     * @return array|bool
+     */
+    public function pf_array_group_by(array $arr, $key)
+    {
+        if (!is_string($key) && !is_int($key)) {
+            return false;
+        }
+        $is_function = !is_string($key) && is_callable($key);
+        $grouped = [];
+        foreach ($arr as $value) {
+            $groupKey = null;
+            if ($is_function) {
+                $groupKey = $key($value);
+            } else if (is_object($value)) {
+                $groupKey = $value->{$key};
+            } else {
+                if(!isset($value[$key])) {
+                    return false;
+                }
+                $groupKey = $value[$key];
+            }
+            $grouped[$groupKey][] = $value;
+        }
+        if (func_num_args() > 2) {
+            $args = func_get_args();
+            foreach ($grouped as $groupKey => $value) {
+                $params = array_merge([$value], array_slice($args, 2, func_num_args()));
+                $grouped[$groupKey] = call_user_func_array([$this,'pf_array_group_by'], $params);
+            }
+        }
+        return $grouped;
+    }
 	/**
      * 结构化打印数组
      * @param $arr
