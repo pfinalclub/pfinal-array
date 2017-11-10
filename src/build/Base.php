@@ -526,6 +526,32 @@ class Base
         }
         return $grouped;
     }
+
+    /**
+     * 把数组中的null 转换成 空字符串
+     * @param $arr
+     * @return array|string
+     */
+    public function pf_array_null($arr) {
+
+        if ($arr !== null) {
+            if (is_array($arr)) {
+                if (!empty($arr)) {
+                    foreach ($arr as $key => $value) {
+                        if ($value === null) {
+                            $arr[$key] = '';
+                        } else {
+                            $arr[$key] = $this->pf_array_null($value);		//递归再去执行
+                        }
+                    }
+                }else{ $arr = ''; }
+            } else {
+                if ($arr === null) { $arr = ''; }
+            }
+        } else { $arr = ''; }
+        return $arr;
+    }
+
 	/**
      * 结构化打印数组
      * @param $arr

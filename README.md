@@ -32,6 +32,7 @@
 - pf_array_diff_both()    返回两个数组中不同的元素
 - pf_getCloud()      返回数组的标签云
 - pf_array_group_by() 按指定的键对数组依次分组
+- pf_array_null()    把数组中的null转换成空字符串
 
 ## 安装
 
