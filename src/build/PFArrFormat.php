@@ -7,7 +7,8 @@ trait PFArrFormat {
         'json'=>'format_json',
         'xml'=>'format_xml',
         'serialize'=>'format_serialize',
-        'obj'      =>'format_obj'
+        'obj'      =>'format_obj',
+        'csv'      =>'format_csv'
     );
 
     public function pf_encode($array,$type='json') {
@@ -62,6 +63,26 @@ trait PFArrFormat {
         }
         return $xml->asXML();
     }
+
+    public function format_csv($data)
+    {
+        if (is_array($data) and isset($data[0]))
+        {
+            $headings = array_keys($data[0]);
+        }
+        else
+        {
+            $headings = array_keys((array) $data);
+            $data = array($data);
+        }
+        $output = implode(',', $headings) . "\r\n";
+        foreach ($data as &$row)
+        {
+            $output .= '"' . implode('","', (array) $row) . "\"\r\n";
+        }
+        return $output;
+    }
+
 
     private function format_obj($array) {
         $array = json_encode($array);

@@ -5,6 +5,7 @@ namespace pf\arr\build;
 class Base
 {
     use PFArrFormat;
+    use PFArrToCsv;
 
     /**
      * 数组合并
