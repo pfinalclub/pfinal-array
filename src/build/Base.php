@@ -125,17 +125,18 @@ class Base
      * @param int $parent_id
      * @return array
      */
-    public function tree($list,$parent_id=0) {
+    public function tree($list, $parent_id = 0)
+    {
         $arr = [];
-        $tree= [];
+        $tree = [];
         foreach ($list as $value) {
-            $arr[$value['parent_id']][]=$value;
+            $arr[$value['parent_id']][] = $value;
         }
 
-        foreach ($arr[$parent_id] as $key=>$val) {
+        foreach ($arr[$parent_id] as $key => $val) {
             $tree[$key][] = $val;
             foreach ($arr[$val['id']] as $v) {
-                $tree[$key]['son'][]=$v;
+                $tree[$key]['son'][] = $v;
             }
         }
         return $tree;
@@ -147,7 +148,8 @@ class Base
      * @param int $parent_id
      * @return array
      */
-    function getTree($list, $parent_id = 0) {
+    function getTree($list, $parent_id = 0)
+    {
         $tree = [];
         if (!empty($list)) {
             //先修改为以id为下标的列表
@@ -168,7 +170,8 @@ class Base
 
                 }
             }
-        }    return $tree;
+        }
+        return $tree;
     }
 
     /**
@@ -176,22 +179,23 @@ class Base
      * @param $arr
      * @return array
      */
-    public function pf_array_unique($arr) {
+    public function pf_array_unique($arr)
+    {
         $dime = $this->array_depth($arr);
-        if($dime <= 1) {
-            $data =array_unique($arr);
+        if ($dime <= 1) {
+            $data = array_unique($arr);
         } else {
-            $temp=[];
-            $new_data=[];
-            foreach ($arr as $key=>$v) {
-                if(is_array($v)) {
-                    $new_data =$this->pf_array_unique($v);
+            $temp = [];
+            $new_data = [];
+            foreach ($arr as $key => $v) {
+                if (is_array($v)) {
+                    $new_data = $this->pf_array_unique($v);
                 } else {
-                    $temp[$key]=$v;
+                    $temp[$key] = $v;
                 }
             }
-            $data=array_unique($temp);
-            array_push($data,$new_data);
+            $data = array_unique($temp);
+            array_push($data, $new_data);
         }
         return $data;
     }
@@ -202,8 +206,9 @@ class Base
      * @param $array
      * @return int
      */
-    public function array_depth($array) {
-        if(!is_array($array)) return 0;
+    public function array_depth($array)
+    {
+        if (!is_array($array)) return 0;
         $max_depth = 1;
         foreach ($array as $value) {
             if (is_array($value)) {
@@ -227,7 +232,7 @@ class Base
     public function pf_array_col($array, $columnKey, $indexKey = null)
     {
         $result = array();
-        if(!empty($array)) {
+        if (!empty($array)) {
             if (!function_exists('array_column')) {
                 foreach ($array as $val) {
                     if (!is_array($val)) {
@@ -254,7 +259,7 @@ class Base
      * @param $obj
      * @return array
      */
-    public  function pf_obj_arr($obj)
+    public function pf_obj_arr($obj)
     {
         $arr = is_object($obj) ? get_object_vars($obj) : $obj;
         if (is_array($arr)) {
@@ -266,109 +271,99 @@ class Base
             return $arr;
         }
     }
-	
-	/**
-	 * 将多维折叠数组变为一维
-	 *
-	 * @param array $values     多维数组
-	 * @param bool $drop_empty  去掉为空的值
-	 * @return array
-	 */
-	public function pf_array_flatten(array $values, $drop_empty = false)
-	{
-		$result = [];
-		array_walk_recursive($values, function($value)
-		use(&$result, $drop_empty) {
-			if (!$drop_empty || !empty($value)) {
-				$result[] = $value;
-			}
-		});
-		return $result;
-	}
-	
-	//判断PHP数组是否索引数组（列表/向量表）
-	
-	public function pf_is_list($arr)
-	
-	{
-		if ( ! is_array($arr) ) {
-			return false;
-		}
-		else if ( empty($arr) ) {
-			return true;
-		}
-		else {
-			$key_is_nums = array_map('is_numeric', array_keys($arr));
-			return array_reduce($key_is_nums, 'and', true);
-		}
-	}
-	
-	/**
-	 
-	 * 根据权重获取随机区间返回ID
-	 
-	 * @param array $array 格式为  array(array('id'=>'','value'=>''),array('id'=>'','value'=>''))   //id为标识,value为权重
-	 
-	 * @return int|string
-	 
-	 */
-	public function pf_array_rand_by_weight($array)
-	{
-		if (!empty($array)) {
-			//区间最大值
-			$sum = 0;
-			//区间数组
-			$interval = array();
-			//制造区间
-			foreach ($array as $value) {
-				
-				$interval[$value['id']]['min'] = $sum + 1;
-				$interval[$value['id']]['max'] = $sum + $value['value'];
-				$sum += $value['value'];
-			}
-			//在区间内随机一个数
-			$result = rand(1, $sum);
-			//获取结果属于哪个区间, 返回其ID
-			
-			foreach ($interval as $id=>$v) {
-				
-				while ($result >= $v['min'] && $result <= $v['max']) {
-					return $id;
-				}
-			}
-		}
-		return 0;
-	}
-	
-	/**
-	 
-	 * 二维数组验证一个值是否存在
-	 
-	 * @param $value
-	 
-	 * @param $array
-	 
-	 * @return bool
-	 
-	 */
-	public function pf_deep_in_array($value, $array) {
-		foreach($array as $item) {
-			if(!is_array($item)) {
-				if ($item == $value) {
-					return true;
-				} else {
-					continue;
-				}
-			}
-			
-			if(in_array($value, $item)) {
-				return true;
-			} else if($this->pf_deep_in_array($value, $item)) {
-				return true;
-			}
-		}
-		return false;
-	}
+
+    /**
+     * 将多维折叠数组变为一维
+     *
+     * @param array $values 多维数组
+     * @param bool $drop_empty 去掉为空的值
+     * @return array
+     */
+    public function pf_array_flatten(array $values, $drop_empty = false)
+    {
+        $result = [];
+        array_walk_recursive($values, function ($value)
+        use (&$result, $drop_empty) {
+            if (!$drop_empty || !empty($value)) {
+                $result[] = $value;
+            }
+        });
+        return $result;
+    }
+
+    //判断PHP数组是否索引数组（列表/向量表）
+
+    public function pf_is_list($arr)
+
+    {
+        if (!is_array($arr)) {
+            return false;
+        } else if (empty($arr)) {
+            return true;
+        } else {
+            $key_is_nums = array_map('is_numeric', array_keys($arr));
+            return array_reduce($key_is_nums, 'and', true);
+        }
+    }
+
+    /**
+     * 根据权重获取随机区间返回ID
+     * @param array $array 格式为  array(array('id'=>'','value'=>''),array('id'=>'','value'=>''))   //id为标识,value为权重
+     * @return int|string
+     */
+    public function pf_array_rand_by_weight($array)
+    {
+        if (!empty($array)) {
+            //区间最大值
+            $sum = 0;
+            //区间数组
+            $interval = array();
+            //制造区间
+            foreach ($array as $value) {
+
+                $interval[$value['id']]['min'] = $sum + 1;
+                $interval[$value['id']]['max'] = $sum + $value['value'];
+                $sum += $value['value'];
+            }
+            //在区间内随机一个数
+            $result = rand(1, $sum);
+            //获取结果属于哪个区间, 返回其ID
+
+            foreach ($interval as $id => $v) {
+
+                while ($result >= $v['min'] && $result <= $v['max']) {
+                    return $id;
+                }
+            }
+        }
+        return 0;
+    }
+
+    /**
+     * 二维数组验证一个值是否存在
+     * @param $value
+     * @param $array
+     * @return bool
+     */
+    public function pf_deep_in_array($value, $array)
+    {
+        foreach ($array as $item) {
+            if (!is_array($item)) {
+                if ($item == $value) {
+                    return true;
+                } else {
+                    continue;
+                }
+            }
+
+            if (in_array($value, $item)) {
+                return true;
+            } else if ($this->pf_deep_in_array($value, $item)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     /**
@@ -377,9 +372,10 @@ class Base
      * @param int $len
      * @return array|bool|mixed
      */
-	public function pf_rand_val($array,$len=1) {
-	    if(!is_array($array)) {
-	        return false;
+    public function pf_rand_val($array, $len = 1)
+    {
+        if (!is_array($array)) {
+            return false;
         }
         $keys = array_rand($array, $len);
         if ($len === 1) {
@@ -395,14 +391,15 @@ class Base
      * @param array $array
      * @return array|bool|mixed
      */
-    public function pf_rand_weighted(array $array) {
-        if(!is_array($array)) {
+    public function pf_rand_weighted(array $array)
+    {
+        if (!is_array($array)) {
             return false;
         }
 
         $options = [];
         foreach ($array as $weight) {
-            if(!is_array($weight)) {
+            if (!is_array($weight)) {
                 return false;
             }
             for ($i = 0; $i < $weight[1]; ++$i) {
@@ -415,16 +412,17 @@ class Base
     /**
      * 随机打乱数组
      * @param $array
-     * @param bool $statue  true or  false
+     * @param bool $statue true or  false
      * @return bool
      */
-    public function pf_array_shuffle(&$array,$statue = false) {
+    public function pf_array_shuffle(&$array, $statue = false)
+    {
         $keys = array_keys($array);
         shuffle($keys);
         $new = [];
-        foreach($keys as $key) {
-            if(is_array($array[$key] && $statue)) {
-                $new[$key] = $this->pf_array_shuffle($array[$key],1);
+        foreach ($keys as $key) {
+            if (is_array($array[$key] && $statue)) {
+                $new[$key] = $this->pf_array_shuffle($array[$key], 1);
             }
             $new[$key] = $array[$key];
         }
@@ -439,15 +437,16 @@ class Base
      * @param int $position
      * @return array
      */
-    public function pf_array_insert($array, $insert, $position=0) {
-        if(!is_array($insert)) {
+    public function pf_array_insert($array, $insert, $position = 0)
+    {
+        if (!is_array($insert)) {
             $insert = [$insert];
         }
 
-        if($position==0) {
+        if ($position == 0) {
             $array = array_merge($insert, $array);
         } else {
-            if($position >= (count($array)-1)) {
+            if ($position >= (count($array) - 1)) {
                 $array = array_merge($array, $insert);
             } else {
                 $head = array_slice($array, 0, $position);
@@ -464,8 +463,9 @@ class Base
      * @param $array1
      * @return array
      */
-    public function pf_array_diff_both($array,$array1) {
-        return array_merge(array_diff($array,$array1),array_diff($array1,$array));
+    public function pf_array_diff_both($array, $array1)
+    {
+        return array_merge(array_diff($array, $array1), array_diff($array1, $array));
     }
 
     /**
@@ -475,19 +475,20 @@ class Base
      * @param int $maxFontSize
      * @return string
      */
-    public function pf_getCloud( $data = array(), $minFontSize = 12, $maxFontSize = 30 ) {
-        $minimumCount = min( array_values( $data ) );
-        $maximumCount = max( array_values( $data ) );
+    public function pf_getCloud($data = array(), $minFontSize = 12, $maxFontSize = 30)
+    {
+        $minimumCount = min(array_values($data));
+        $maximumCount = max(array_values($data));
         $spread = $maximumCount - $minimumCount;
         $cloudTags = array();
         $spread == 0 && $spread = 1; // 假如等于0，则强制为1
         foreach ($data as $tag => $count) {
-            $color = 'rgb('.rand(0,255).','.rand(0,255).','.rand(0,255).')';
-            $size = $minFontSize + ( $count - $minimumCount ) * ( $maxFontSize - $minFontSize ) / $spread;
-            $cloudTags[] = '<a style="display:block;margin-left:10px;margin-top:'.rand(-5,5).'px;float:left;color:'.$color.';text-decoration:none;font-size: ' . floor( $size ) . 'px' . '" href="#" title="' . $tag  .'' . $count . '">'. htmlspecialchars( stripslashes( $tag ) ) . '</a>';
+            $color = 'rgb(' . rand(0, 255) . ',' . rand(0, 255) . ',' . rand(0, 255) . ')';
+            $size = $minFontSize + ($count - $minimumCount) * ($maxFontSize - $minFontSize) / $spread;
+            $cloudTags[] = '<a style="display:block;margin-left:10px;margin-top:' . rand(-5, 5) . 'px;float:left;color:' . $color . ';text-decoration:none;font-size: ' . floor($size) . 'px' . '" href="#" title="' . $tag . '' . $count . '">' . htmlspecialchars(stripslashes($tag)) . '</a>';
         }
 
-        return join( "", $cloudTags );
+        return join("", $cloudTags);
     }
 
     /**
@@ -510,7 +511,7 @@ class Base
             } else if (is_object($value)) {
                 $groupKey = $value->{$key};
             } else {
-                if(!isset($value[$key])) {
+                if (!isset($value[$key])) {
                     return false;
                 }
                 $groupKey = $value[$key];
@@ -521,7 +522,7 @@ class Base
             $args = func_get_args();
             foreach ($grouped as $groupKey => $value) {
                 $params = array_merge([$value], array_slice($args, 2, func_num_args()));
-                $grouped[$groupKey] = call_user_func_array([$this,'pf_array_group_by'], $params);
+                $grouped[$groupKey] = call_user_func_array([$this, 'pf_array_group_by'], $params);
             }
         }
         return $grouped;
@@ -532,7 +533,8 @@ class Base
      * @param $arr
      * @return array|string
      */
-    public function pf_array_null($arr) {
+    public function pf_array_null($arr)
+    {
 
         if ($arr !== null) {
             if (is_array($arr)) {
@@ -541,25 +543,66 @@ class Base
                         if ($value === null) {
                             $arr[$key] = '';
                         } else {
-                            $arr[$key] = $this->pf_array_null($value);		//递归再去执行
+                            $arr[$key] = $this->pf_array_null($value);        //递归再去执行
                         }
                     }
-                }else{ $arr = ''; }
+                } else {
+                    $arr = '';
+                }
             } else {
-                if ($arr === null) { $arr = ''; }
+                if ($arr === null) {
+                    $arr = '';
+                }
             }
-        } else { $arr = ''; }
+        } else {
+            $arr = '';
+        }
         return $arr;
     }
 
-	/**
+    /**
+     * 组词算法
+     * @param $arr
+     * @param $m
+     * @return array
+     */
+    public function pf_diy_words($arr, $m)
+    {
+        $result = array();
+        if ($m == 1) {//只剩一个词时直接返回
+            return $arr;
+        }
+        if ($m == count($arr)) {
+            $result[] = implode('', $arr);
+            return $result;
+        }
+
+        $temp_firstelement = $arr[0];
+        unset($arr[0]);
+        $arr = array_values($arr);
+        $temp_list1 = $this->pf_diy_words($arr, ($m - 1));
+
+        foreach ($temp_list1 as $s) {
+            $s = $temp_firstelement . $s;
+            $result[] = $s;
+        }
+
+        $temp_list2 = $this->pf_diy_words($arr, $m);
+        foreach ($temp_list2 as $s) {
+            $result[] = $s;
+        }
+        return $result;
+    }
+
+    /**
      * 结构化打印数组
      * @param $arr
      * @param int $type
      */
-    public function dd($arr,$type=1) {
+    public function dd($arr, $type = 1)
+    {
         echo '<pre>';
-        if($type==1) {
+        if ($type == 1) {
             print_r($arr);
         } else {
             var_dump($arr);

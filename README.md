@@ -119,7 +119,19 @@ $arr = PFarr::pf_array_group_by($records,'city');
 $arr1 = PFarr::pf_array_group_by($records,'city','age');
 
 ```
+*组词算法*
+```php
+<?php
+//组词算法  
+$arr=array('裤子','牛仔','低腰','加肥');  
+$count=count($arr);  
+for($i=1;$i<=$count;$i++){  
+    $temp[$i]=PFarr::pf_diy_words($arr,$i);  
+}  
+PFarr::dd($temp);
+  
 
+```
 ### 其他
 
 继续完善
