@@ -595,6 +595,31 @@ class Base
     }
 
     /**
+     * 统计数组元素出现的次数
+     * @return array|bool
+     */
+    public function pf_count_element()
+    {
+        $data = func_get_args();
+        $num = func_num_args();
+        $result = array();
+        if ($num > 0) {
+            for ($i = 0; $i < $num; $i++) {
+                foreach ($data[$i] as $v) {
+                    if (isset($result[$v])) {
+                        $result[$v]++;
+                    } else {
+                        $result[$v] = 1;
+                    }
+                }
+            }
+            return $result;
+        }
+        return false;
+    }
+
+
+    /**
      * 结构化打印数组
      * @param $arr
      * @param int $type
@@ -606,9 +631,10 @@ class Base
             print_r($arr);
         } else {
             var_dump($arr);
+            exit;
         }
         echo '</pre>';
-        exit;
+
     }
 
 }

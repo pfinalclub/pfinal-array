@@ -33,6 +33,7 @@
 - pf_getCloud()      返回数组的标签云
 - pf_array_group_by() 按指定的键对数组依次分组
 - pf_array_null()    把数组中的null转换成空字符串
+- pf_count_element()   统计数组中元素出现的次数
 
 ## 安装
 
@@ -132,6 +133,43 @@ PFarr::dd($temp);
   
 
 ```
+
+*统计数组元素在数组中出现的次数*
+
+```php
+<?php
+$arr_one = ['a','b','c','d'];
+$arr_two = ['a','b','a','c','b','d'];
+
+PFarr::dd(PFarr::pf_count_element($arr_one));
+
+/*
+  返回
+  Array
+   (
+       [a] => 1
+       [b] => 1
+       [c] => 1
+       [d] => 1
+   )
+ */
+
+PFarr::dd(PFarr::pf_count_element($arr_two));
+ /*
+   返回
+ Array
+ (
+     [a] => 2
+     [b] => 2
+     [c] => 1
+     [d] => 1
+ )
+  
+ */
+
+
+```
+
 ### 其他
 
 继续完善
