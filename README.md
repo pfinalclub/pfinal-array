@@ -34,6 +34,7 @@
 - pf_array_group_by() 按指定的键对数组依次分组
 - pf_array_null()    把数组中的null转换成空字符串
 - pf_count_element()   统计数组中元素出现的次数
+- pf_map()   重组数组
 
 ## 安装
 
@@ -169,7 +170,49 @@ PFarr::dd(PFarr::pf_count_element($arr_two));
 
 
 ```
+*从多维数组或对象数组构建一个映射(键-值对)。*
 
+```php
+<?php
+$array = [
+    ['id' => '123', 'name' => 'aaa', 'class' => 'x'],
+    ['id' => '124', 'name' => 'bbb', 'class' => 'x'],
+    ['id' => '345', 'name' => 'ccc', 'class' => 'y'],
+];
+
+PFarr::dd(PFarr::pf_map($array,'id','name'));
+
+/*
+  返回:
+ Array
+ (
+     [123] => aaa
+     [124] => bbb
+     [345] => ccc
+ )
+ */
+
+
+PFarr::dd(PFarr::pf_map($array,'id','name','class'));
+/*
+返回
+Array
+(
+    [x] => Array
+        (
+            [123] => aaa
+            [124] => bbb
+        )
+
+    [y] => Array
+        (
+            [345] => ccc
+        )
+
+)
+*/
+
+```
 ### 其他
 
 继续完善

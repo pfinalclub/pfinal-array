@@ -618,6 +618,38 @@ class Base
         return false;
     }
 
+    /**
+     * 重组数组
+     * @param $array
+     * @param $from
+     * @param $to
+     * @param null $group
+     * @return array
+     */
+    public function pf_map($array, $from, $to, $group = null)
+    {
+        if (!is_array($array)) {
+            return array();
+        }
+        $result = [];
+        foreach ($array as $element) {
+            if (!array_key_exists($from, $element) OR !array_key_exists($to, $element)) {
+                continue;
+            }
+            $key = $element[$from];
+            $value = $element[$to];
+            if ($group !== null) {
+                if (!array_key_exists($group, $element)) {
+                    continue;
+                }
+                $result[$element[$group]][$key] = $value;
+            } else {
+                $result[$key] = $value;
+            }
+        }
+
+        return $result;
+    }
 
     /**
      * 结构化打印数组
