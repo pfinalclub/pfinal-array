@@ -6,6 +6,7 @@ class Base
 {
     use PFArrFormat;
     use PFArrToCsv;
+    use PFArrCheck;
 
     /**
      * 数组合并
@@ -29,7 +30,7 @@ class Base
      * @param array $values
      * @return array
      */
-    public function del_val(array $data, array $values)
+    public function pf_del_val(array $data, array $values)
     {
         $news = [];
         foreach ($data as $key => $v) {
@@ -66,7 +67,7 @@ class Base
      * @param $arr
      * @return bool
      */
-    public function keyExists($key, $arr)
+    public function pf_key_exists($key, $arr)
     {
         return array_key_exists(strtolower($key), $this->keyExists($arr));
     }
@@ -80,7 +81,7 @@ class Base
      *
      * @return array
      */
-    public function filterKeys(array $data, $keys, $type = 1)
+    public function pf_filter_keys(array $data, $keys, $type = 1)
     {
         $tmp = $data;
         foreach ($data as $k => $v) {
@@ -125,7 +126,7 @@ class Base
      * @param int $parent_id
      * @return array
      */
-    public function tree($list, $parent_id = 0)
+    public function pf_tree($list, $parent_id = 0)
     {
         $arr = [];
         $tree = [];
@@ -148,7 +149,7 @@ class Base
      * @param int $parent_id
      * @return array
      */
-    function getTree($list, $parent_id = 0)
+    public function pf_get_tree($list, $parent_id = 0)
     {
         $tree = [];
         if (!empty($list)) {
