@@ -653,6 +653,42 @@ class Base
     }
 
     /**
+     * 按指定值去给数组排序
+     * @param array $arr
+     * @param $key
+     * @return array
+     */
+    public function pf_arr_group_by(array $arr, $key)
+    {
+        if (!is_string($key) && !is_int($key) && !is_float($key) && !is_callable($key)) {
+            trigger_error('array_group_by():键应该是一个字符串、一个整数、一个浮点数或一个函数', E_USER_ERROR);
+        }
+        $isFunction = !is_string($key) && is_callable($key);
+        // Load the new array, splitting by the target key
+        $grouped = [];
+        foreach ($arr as $value) {
+            $groupKey = null;
+            if ($isFunction) {
+                $groupKey = $key($value);
+            } else if (is_object($value)) {
+                $groupKey = $value->{$key};
+            } else {
+                $groupKey = $value[$key];
+            }
+            $grouped[$groupKey][] = $value;
+        }
+
+        if (func_num_args() > 2) {
+            $args = func_get_args();
+            foreach ($grouped as $groupKey => $value) {
+                $params = array_merge([$value], array_slice($args, 2, func_num_args()));
+                $grouped[$groupKey] = call_user_func_array(array($this, 'self::pf_arr_group_by'), $params);
+            }
+        }
+        return $grouped;
+    }
+
+    /**
      * 结构化打印数组
      * @param $arr
      * @param int $type
