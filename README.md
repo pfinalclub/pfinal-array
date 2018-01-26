@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/apm/l/vim-mode.svg)
 [![](https://img.shields.io/badge/Downloads-4k-red.svg)](https://packagist.org/packages/nancheng/pfinal-array)
-
+[![](https://badge.juejin.im/entry/5a6b4f7df265da3e2c3853a0/likes.svg?style=flat-square)](https://juejin.im/entry/5a6b4f7df265da3e2c3853a0/detail)
 
 **Note:** ```PHP``` ```PHPArray``` ```Validator```
 
