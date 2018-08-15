@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/pf_exists.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/pf_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/build/PFArrCheck.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/Base.php" afterPath="$PROJECT_DIR$/src/build/Base.php" />
     </list>
@@ -28,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Base.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1331">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="393">
+              <caret line="691" column="16" lean-forward="false" selection-start-line="691" selection-start-column="16" selection-end-line="691" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -42,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,7 +56,7 @@
       <file leaf-file-name="PFArrCheck.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/build/PFArrCheck.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-960">
               <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
@@ -68,37 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="197" column="40" lean-forward="false" selection-start-line="197" selection-start-column="40" selection-end-line="197" selection-end-column="40" />
-              <folding>
-                <element signature="e#31#342#0#PHP" expanded="false" />
-                <element signature="e#348#1861#0#PHP" expanded="false" />
-                <element signature="e#1867#2234#0#PHP" expanded="false" />
-                <element signature="e#2240#3020#0#PHP" expanded="false" />
-                <element signature="e#3026#3346#0#PHP" expanded="false" />
-                <element signature="e#3352#6540#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+              <first_editor relative-caret-position="500">
+                <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="33" />
                 <folding>
-                  <marker date="1516332034971" expanded="true" signature="2506:2555" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="2736:2825" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="2878:2958" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="3017:3180" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="3233:3308" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="3369:3373" ph="..." />
-                  <marker date="1516332034971" expanded="true" signature="3369:3534" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="2717:2766" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="2947:3036" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="3089:3169" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="3228:3391" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="3444:3519" ph="..." />
+                  <marker date="1534327587070" expanded="true" signature="3580:3745" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -119,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pf_save.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pf_save.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/pf_save.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
@@ -168,14 +155,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../../style.css" />
-        <option value="$PROJECT_DIR$/src/build/Base.php" />
         <option value="$PROJECT_DIR$/src/build/PFArrCheck.php" />
         <option value="$PROJECT_DIR$/src/build/PFArrFormat.php" />
         <option value="$PROJECT_DIR$/../../1.php" />
         <option value="$PROJECT_DIR$/example/pf_exists.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/example/README.md" />
         <option value="$PROJECT_DIR$/example/pf_save.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/build/Base.php" />
       </list>
     </option>
   </component>
@@ -186,9 +173,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="24" />
-    <option name="y" value="1" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2048" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -207,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,6 +220,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -270,17 +256,18 @@
       <workItem from="1509797750906" duration="1219000" />
       <workItem from="1510194057622" duration="11940000" />
       <workItem from="1516328300962" duration="3842000" />
+      <workItem from="1534327443059" duration="346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17001000" />
+    <option name="totallyTimeSpent" value="17347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="2048" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1663113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16917293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -320,86 +307,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/build/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#342#0#PHP" expanded="false" />
-            <element signature="e#348#1861#0#PHP" expanded="false" />
-            <element signature="e#1867#2234#0#PHP" expanded="false" />
-            <element signature="e#2240#3020#0#PHP" expanded="false" />
-            <element signature="e#3026#3346#0#PHP" expanded="false" />
-            <element signature="e#3352#6540#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="540">
-            <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="20" />
-            <folding>
-              <marker date="1516332034971" expanded="true" signature="2506:2555" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2736:2825" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2878:2958" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3017:3180" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3233:3308" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3373" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3534" ph="..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6120">
-          <caret line="306" column="7" lean-forward="false" selection-start-line="306" selection-start-column="7" selection-end-line="306" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="500">
-            <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-            <folding>
-              <marker date="1516332034971" expanded="true" signature="2506:2555" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2736:2825" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2878:2958" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3017:3180" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3233:3308" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3373" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3534" ph="..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../style.css" />
     <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1331">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -420,18 +337,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../1.php">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="760">
+            <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+            <folding>
+              <marker date="1534327587070" expanded="true" signature="2717:2766" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="2947:3036" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3089:3169" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3228:3391" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3444:3519" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3580:3745" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="160">
+            <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pf_exists.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="197" column="40" lean-forward="false" selection-start-line="197" selection-start-column="40" selection-end-line="197" selection-end-column="40" />
-          <folding>
-            <element signature="e#31#342#0#PHP" expanded="false" />
-            <element signature="e#348#1861#0#PHP" expanded="false" />
-            <element signature="e#1867#2234#0#PHP" expanded="false" />
-            <element signature="e#2240#3020#0#PHP" expanded="false" />
-            <element signature="e#3026#3346#0#PHP" expanded="false" />
-            <element signature="e#3352#6540#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -443,22 +382,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example/pf_save.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../1.php" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <first_editor relative-caret-position="540">
+            <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="20" />
             <folding>
-              <marker date="1516332034971" expanded="true" signature="2506:2555" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2736:2825" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="2878:2958" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3017:3180" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3233:3308" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3373" ph="..." />
-              <marker date="1516332034971" expanded="true" signature="3369:3534" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="2717:2766" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="2947:3036" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3089:3169" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3228:3391" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3444:3519" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3580:3745" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6120">
+          <caret line="306" column="7" lean-forward="false" selection-start-line="306" selection-start-column="7" selection-end-line="306" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="500">
+            <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <folding>
+              <marker date="1534327587070" expanded="true" signature="2717:2766" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="2947:3036" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3089:3169" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3228:3391" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3444:3519" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3580:3745" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../style.css" />
+    <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../1.php" />
+    <entry file="file://$PROJECT_DIR$/example/arrayTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -485,6 +484,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/PFArrFormat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/PFArrCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-960">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="500">
+            <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="33" />
+            <folding>
+              <marker date="1534327587070" expanded="true" signature="2717:2766" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="2947:3036" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3089:3169" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3228:3391" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3444:3519" ph="..." />
+              <marker date="1534327587070" expanded="true" signature="3580:3745" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="691" column="16" lean-forward="false" selection-start-line="691" selection-start-column="16" selection-end-line="691" selection-end-column="16" />
           <folding />
         </state>
       </provider>

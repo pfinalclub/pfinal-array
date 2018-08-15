@@ -42,7 +42,7 @@ class Base
     }
 
     /**
-     * 根据建明获取值
+     * 根据键名获取值
      * @param array $data
      * @param $key
      * @param null $value
@@ -689,6 +689,33 @@ class Base
     }
 
     /**
+     * 按指定键给数组排序
+     * @param $arr
+     * @param $key
+     * @param string $orderby
+     * @return array|bool
+     */
+    public function pf_arr_sort_by_key($arr,$key,$orderby = 'asc')
+    {
+        if(count($arr)<0) return false;
+        $keys_value =[];
+        $new_array = [];
+        foreach ($arr as $k => $v) {
+            $keys_value[$k] = $v[$key];
+        }
+        if ($orderby == 'asc') {
+            asort($keys_value);
+        } else {
+            arsort($keys_value);
+        }
+        reset($keys_value);
+        foreach ($keys_value as $k => $v) {
+            $new_array[] = $arr[$k];
+        }
+        return $new_array;
+    }
+
+    /**
      * 结构化打印数组
      * @param $arr
      * @param int $type
@@ -703,7 +730,6 @@ class Base
             exit;
         }
         echo '</pre>';
-
     }
 
 }

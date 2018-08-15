@@ -38,6 +38,7 @@
 - pf_exists()  判断数组中某个键有木有值
 - pf_save()  通过字符串表示将元素保存到数组中
 - pf_arr_group_by()  按指定值给数组分组
+- pf_arr_sort_by_key()  按指定键给数组排序
 
 ## 安装
 
