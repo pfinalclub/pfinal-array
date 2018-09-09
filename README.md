@@ -40,6 +40,9 @@
 - pf_arr_group_by()  按指定值给数组分组
 - pf_arr_sort_by_key()  按指定键给数组排序
 
+- pf_date_indexed() 生成一个日期数组
+- pf_date_assoc() 产生一个关联数组
+
 ## 安装
 
 通过 Composer 安装：

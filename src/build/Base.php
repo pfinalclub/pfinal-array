@@ -7,6 +7,7 @@ class Base
     use PFArrFormat;
     use PFArrToCsv;
     use PFArrCheck;
+    use PFDateArr;
 
     /**
      * 数组合并
