@@ -696,10 +696,10 @@ class Base
      * @param string $orderby
      * @return array|bool
      */
-    public function pf_arr_sort_by_key($arr,$key,$orderby = 'asc')
+    public function pf_arr_sort_by_key($arr, $key, $orderby = 'asc')
     {
-        if(count($arr)<0) return false;
-        $keys_value =[];
+        if (count($arr) < 0) return false;
+        $keys_value = [];
         $new_array = [];
         foreach ($arr as $k => $v) {
             $keys_value[$k] = $v[$key];
@@ -714,6 +714,34 @@ class Base
             $new_array[] = $arr[$k];
         }
         return $new_array;
+    }
+
+    /**
+     * 递归过滤多维数组中 空白字符，负值，false，null
+     * @param $arr
+     * @param bool $trim
+     * @param bool $unsetEmptyArr
+     * @return array
+     */
+
+    public function pf_arr_remove_empty(&$arr, $trim = true, $unsetEmptyArr = false)
+    {
+        foreach ($arr as $key => $value) {
+            if (is_array($value)) {
+                $this->pf_arr_remove_empty($arr[$key]);
+            } else {
+                $value = trim($value);
+                if ($value == '') {
+                    unset($arr[$key]);
+                } elseif ($trim) {
+                    $arr[$key] = $value;
+                }
+            }
+        }
+        if (is_bool($unsetEmptyArr) && $unsetEmptyArr) {
+            $arr = array_filter($arr);
+        }
+        return $arr;
     }
 
     /**

@@ -39,6 +39,7 @@
 - pf_save()  通过字符串表示将元素保存到数组中
 - pf_arr_group_by()  按指定值给数组分组
 - pf_arr_sort_by_key()  按指定键给数组排序
+- pf_arr_remove_empty()  递归过滤多维数组中 空白字符，负值，false，null
 
 - pf_date_indexed() 生成一个日期数组
 - pf_date_assoc() 产生一个关联数组

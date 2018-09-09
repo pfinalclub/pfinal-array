@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/pf_data.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/build/PFDateArr.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/README.md" afterPath="$PROJECT_DIR$/example/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/Base.php" afterPath="$PROJECT_DIR$/src/build/Base.php" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/pfinal-array.iml" afterPath="$PROJECT_DIR$/.idea/pfinal-array.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/src/build/Base.php" afterPath="$PROJECT_DIR$/src/build/Base.php" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
     </list>
     <ignored path="pfinal-array.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,6 +27,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -26,6 +37,7 @@
     <favorites_list name="pfinal-array" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/Base.php">
@@ -80,6 +92,22 @@
                   <marker date="1536464988019" expanded="true" signature="3285:3448" ph="..." />
                   <marker date="1536464988019" expanded="true" signature="3501:3576" ph="..." />
                   <marker date="1536464988019" expanded="true" signature="3637:3802" ph="..." />
+=======
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="333">
+                <caret line="41" column="53" lean-forward="false" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+                <folding>
+                  <marker date="1536390196414" expanded="true" signature="2771:2820" ph="..." />
+                  <marker date="1536390196414" expanded="true" signature="3001:3090" ph="..." />
+                  <marker date="1536390196414" expanded="true" signature="3143:3223" ph="..." />
+                  <marker date="1536390196414" expanded="true" signature="3282:3445" ph="..." />
+                  <marker date="1536390196414" expanded="true" signature="3498:3573" ph="..." />
+                  <marker date="1536390196414" expanded="true" signature="3634:3799" ph="..." />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
                 </folding>
               </first_editor>
               <second_editor />
@@ -87,6 +115,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -140,6 +169,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -158,17 +189,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../style.css" />
+        <option value="$USER_HOME$/style.css" />
         <option value="$PROJECT_DIR$/src/build/PFArrCheck.php" />
         <option value="$PROJECT_DIR$/src/build/PFArrFormat.php" />
-        <option value="$PROJECT_DIR$/../../1.php" />
+        <option value="$USER_HOME$/1.php" />
         <option value="$PROJECT_DIR$/example/pf_exists.php" />
         <option value="$PROJECT_DIR$/example/pf_save.php" />
         <option value="$PROJECT_DIR$/src/build/Base.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/example/pf_data.php" />
         <option value="$PROJECT_DIR$/src/build/PFDateArr.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/example/README.md" />
+=======
+        <option value="$PROJECT_DIR$/README.md" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
       </list>
     </option>
   </component>
@@ -179,10 +214,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2048" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
+=======
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -209,11 +251,6 @@
             <path>
               <item name="pfinal-array" type="b2602c69:ProjectViewProjectNode" />
               <item name="pfinal-array" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="example" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pfinal-array" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pfinal-array" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -234,7 +271,11 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -252,6 +293,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="562a38ae-83b9-4f5e-ba82-c0d66a32497e" name="Default" comment="" />
@@ -262,13 +306,19 @@
       <workItem from="1509797750906" duration="1219000" />
       <workItem from="1510194057622" duration="11940000" />
       <workItem from="1516328300962" duration="3842000" />
+<<<<<<< HEAD
       <workItem from="1534327443059" duration="399000" />
       <workItem from="1534404711207" duration="1390000" />
       <workItem from="1536462207159" duration="1373000" />
+=======
+      <workItem from="1534327443059" duration="346000" />
+      <workItem from="1536389128446" duration="477000" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="20163000" />
   </component>
   <component name="ToolWindowManager">
@@ -276,7 +326,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16927083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="17824000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -315,12 +375,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/build/Base.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="13820">
+=======
+        <state relative-caret-position="10365">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <caret line="691" column="16" lean-forward="false" selection-start-line="691" selection-start-column="16" selection-end-line="691" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -410,12 +475,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="22" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="22" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/../test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="40">
+=======
+        <state relative-caret-position="30">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
@@ -423,7 +499,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/PFArrCheck.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="120">
+=======
+        <state relative-caret-position="90">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="30" />
           <folding />
         </state>
@@ -431,7 +511,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/PFArrFormat.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
+=======
+        <state relative-caret-position="45">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
           <folding />
         </state>
@@ -440,6 +524,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
+<<<<<<< HEAD
           <first_editor relative-caret-position="800">
             <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="33" />
             <folding>
@@ -450,6 +535,11 @@
               <marker date="1536464988019" expanded="true" signature="3501:3576" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3637:3802" ph="..." />
             </folding>
+=======
+          <first_editor relative-caret-position="600">
+            <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="33" />
+            <folding />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           </first_editor>
           <second_editor />
         </state>
@@ -458,7 +548,11 @@
     <entry file="file://$PROJECT_DIR$/example/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
+<<<<<<< HEAD
           <first_editor relative-caret-position="160">
+=======
+          <first_editor relative-caret-position="120">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
             <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             <folding />
           </first_editor>
@@ -468,7 +562,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/pf_save.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="380">
+=======
+        <state relative-caret-position="285">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
           <folding />
         </state>
@@ -527,6 +625,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="760">
             <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+<<<<<<< HEAD
             <folding>
               <marker date="1536464988019" expanded="true" signature="2774:2823" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3004:3093" ph="..." />
@@ -535,6 +634,9 @@
               <marker date="1536464988019" expanded="true" signature="3501:3576" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3637:3802" ph="..." />
             </folding>
+=======
+            <folding />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           </first_editor>
           <second_editor />
         </state>
@@ -583,12 +685,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../1.php" />
+    <entry file="file://$USER_HOME$/1.php" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="540">
             <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="20" />
+<<<<<<< HEAD
             <folding>
               <marker date="1536464988019" expanded="true" signature="2774:2823" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3004:3093" ph="..." />
@@ -597,6 +700,9 @@
               <marker date="1536464988019" expanded="true" signature="3501:3576" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3637:3802" ph="..." />
             </folding>
+=======
+            <folding />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           </first_editor>
           <second_editor />
         </state>
@@ -615,6 +721,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="500">
             <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+<<<<<<< HEAD
             <folding>
               <marker date="1536464988019" expanded="true" signature="2774:2823" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3004:3093" ph="..." />
@@ -623,11 +730,15 @@
               <marker date="1536464988019" expanded="true" signature="3501:3576" ph="..." />
               <marker date="1536464988019" expanded="true" signature="3637:3802" ph="..." />
             </folding>
+=======
+            <folding />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../../style.css" />
     <entry file="file://$PROJECT_DIR$/../../1.php" />
     <entry file="file://$PROJECT_DIR$/../test.php">
@@ -646,6 +757,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build/PFArrFormat.php">
+=======
+    <entry file="file://$USER_HOME$/style.css" />
+    <entry file="file://$USER_HOME$/1.php" />
+    <entry file="file://$PROJECT_DIR$/example/arrayTest.php">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
@@ -661,7 +777,27 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/example/arrayTest.php">
+=======
+    <entry file="file://$PROJECT_DIR$/example/pf_save.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pf_exists.php">
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -669,22 +805,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/pf_save.php">
+    <entry file="file://$PROJECT_DIR$/src/build/PFArrCheck.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="160">
           <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+=======
+        <state relative-caret-position="90">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="30" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/pf_exists.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="260">
           <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="14" />
+=======
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -718,18 +865,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="39" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/build/PFArrToCsv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/build/PFDateArr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="64" column="40" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="40" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/build/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="718" column="35" lean-forward="true" selection-start-line="718" selection-start-column="7" selection-end-line="718" selection-end-column="35" />
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/example/pf_arr_group_by.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
@@ -746,5 +907,25 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="333">
+            <caret line="41" column="53" lean-forward="false" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+            <folding>
+              <marker date="1536390196414" expanded="true" signature="2771:2820" ph="..." />
+              <marker date="1536390196414" expanded="true" signature="3001:3090" ph="..." />
+              <marker date="1536390196414" expanded="true" signature="3143:3223" ph="..." />
+              <marker date="1536390196414" expanded="true" signature="3282:3445" ph="..." />
+              <marker date="1536390196414" expanded="true" signature="3498:3573" ph="..." />
+              <marker date="1536390196414" expanded="true" signature="3634:3799" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> af8fd21da435a5e3763ba718c185288b69b515ce
   </component>
 </project>
