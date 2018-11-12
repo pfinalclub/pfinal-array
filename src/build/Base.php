@@ -137,13 +137,14 @@ class Base
 
         foreach ($arr[$parent_id] as $key => $val) {
             $tree[$key][] = $val;
-            foreach ($arr[$val['id']] as $v) {
-                $tree[$key]['son'][] = $v;
+            if (isset($arr[$val['id']]) && count($arr[$val['id']]) > 0) {
+                foreach ($arr[$val['id']] as $v) {
+                    $tree[$key]['son'][] = $v;
+                }
             }
         }
         return $tree;
     }
-
     /**
      * 多级获取树形结构
      * @param $list
