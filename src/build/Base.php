@@ -10,22 +10,6 @@ class Base
     use PFDateArr;
 
     /**
-     * 数组合并
-     * @param $arr
-     * @param $res
-     * @return array
-     */
-    public function pf_merge($arr, $res)
-    {
-        $res = is_array($res) ? $res : [];
-        foreach ($arr as $k => $v) {
-            $res[$k] = isset($res[$k]) ? $res[$k] : $v;
-            $res[$k] = is_array($res[$k]) ? $this->merge($v, $res[$k]) : $res[$k];
-        }
-        return $res;
-    }
-
-    /**
      * 移除数组中的某个值 获取新数组
      * @param array $data
      * @param array $values
@@ -64,25 +48,31 @@ class Base
 
     /**
      * 不区分大小写 检测数据数据键名
-     * @param $key
      * @param $arr
+     * @param $key
      * @return bool
      */
-    public function pf_key_exists($key, $arr)
+    public function pf_key_exists($arr, $key)
     {
-        return array_key_exists(strtolower($key), $this->keyExists($arr));
+        if (!is_array($arr)) return false;
+        if (array_key_exists(strtolower($key), $arr)) {
+            return true;
+        } else {
+            foreach ($arr as $value) {
+                if (is_array($value)) {
+                    return $this->pf_key_exists($value, $key);
+                }
+            }
+        }
     }
 
     /**
-     * 根据下标过滤数据元素
-     *
-     * @param array $data 原数组数据
-     * @param       $keys 参数的下标
-     * @param int $type 1 存在在$keys时过滤  0 不在时过滤
-     *
+     * @param array $data
+     * @param array $keys
+     * @param int $type
      * @return array
      */
-    public function pf_filter_keys(array $data, $keys, $type = 1)
+    public function pf_filter_keys(array $data, array $keys, $type = 1)
     {
         $tmp = $data;
         foreach ($data as $k => $v) {
@@ -102,7 +92,7 @@ class Base
     }
 
     /**
-     * 数组排序
+     * 多维数组排序
      * @param $arr
      * @return mixed
      */
@@ -111,10 +101,14 @@ class Base
         $len = count($arr);
         for ($i = 1; $i < $len; $i++) {
             for ($k = 0; $k < $len - $i; $k++) {
-                if ($arr[$k] > $arr[$k + 1]) {
-                    $tmp = $arr[$k + 1];
-                    $arr[$k + 1] = $arr[$k];
-                    $arr[$k] = $tmp;
+                if (is_array($arr[$k + 1])) {
+                    $arr[$k + 1] = $this->pf_arr_sort($arr[$k + 1]);
+                } else {
+                    if ($arr[$k] > $arr[$k + 1]) {
+                        $tmp = $arr[$k + 1];
+                        $arr[$k + 1] = $arr[$k];
+                        $arr[$k] = $tmp;
+                    }
                 }
             }
         }
@@ -125,26 +119,29 @@ class Base
      * 二级获取树形结构
      * @param $list
      * @param int $parent_id
+     * @param string $field
+     * @param string $field_key
      * @return array
      */
-    public function pf_tree($list, $parent_id = 0)
+    public function pf_tree($list, $parent_id = 0, $field = 'parent_id', $field_key = 'id')
     {
         $arr = [];
         $tree = [];
         foreach ($list as $value) {
-            $arr[$value['parent_id']][] = $value;
+            $arr[$value[$field]][] = $value;
         }
 
         foreach ($arr[$parent_id] as $key => $val) {
             $tree[$key][] = $val;
-            if (isset($arr[$val['id']]) && count($arr[$val['id']]) > 0) {
-                foreach ($arr[$val['id']] as $v) {
+            if (isset($arr[$val[$field_key]]) && count($arr[$val[$field_key]]) > 0) {
+                foreach ($arr[$val[$field_key]] as $v) {
                     $tree[$key]['son'][] = $v;
                 }
             }
         }
         return $tree;
     }
+
     /**
      * 多级获取树形结构
      * @param $list
