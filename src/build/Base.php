@@ -67,6 +67,7 @@ class Base
     }
 
     /**
+     * 过滤数组
      * @param array $data
      * @param array $keys
      * @param int $type
@@ -146,9 +147,11 @@ class Base
      * 多级获取树形结构
      * @param $list
      * @param int $parent_id
+     * @param string $field
+     * @param string $field_key
      * @return array
      */
-    public function pf_get_tree($list, $parent_id = 0)
+    public function pf_get_tree($list, $parent_id = 0, $field = 'parent_id', $field_key = 'id')
     {
         $tree = [];
         if (!empty($list)) {
@@ -157,16 +160,16 @@ class Base
             $newList = [];
 
             foreach ($list as $k => $v) {
-                $newList[$v['id']] = $v;
+                $newList[$v[$field_key]] = $v;
             }
             //然后开始组装成特殊格式
             foreach ($newList as $value) {
 
-                if ($parent_id == $value['parent_id']) {//先取出顶级
-                    $tree[] = &$newList[$value['id']];
-                } elseif (isset($newList[$value['parent_id']])) {
+                if ($parent_id == $value[$field]) {//先取出顶级
+                    $tree[] = &$newList[$value[$field_key]];
+                } elseif (isset($newList[$value[$field]])) {
                     //再判定非顶级的pid是否存在，如果存在，则再pid所在的数组下面加入一个字段items，来将本身存进去
-                    $newList[$value['parent_id']]['items'][] = &$newList[$value['id']];
+                    $newList[$value[$field]]['items'][] = &$newList[$value[$field_key]];
 
                 }
             }
@@ -206,13 +209,13 @@ class Base
      * @param $array
      * @return int
      */
-    public function array_depth($array)
+    public function pf_array_depth($array)
     {
         if (!is_array($array)) return 0;
         $max_depth = 1;
         foreach ($array as $value) {
             if (is_array($value)) {
-                $depth = $this->array_depth($value) + 1;
+                $depth = $this->pf_array_depth($value) + 1;
 
                 if ($depth > $max_depth) {
                     $max_depth = $depth;
@@ -291,20 +294,6 @@ class Base
         return $result;
     }
 
-    //判断PHP数组是否索引数组（列表/向量表）
-
-    public function pf_is_list($arr)
-
-    {
-        if (!is_array($arr)) {
-            return false;
-        } else if (empty($arr)) {
-            return true;
-        } else {
-            $key_is_nums = array_map('is_numeric', array_keys($arr));
-            return array_reduce($key_is_nums, 'and', true);
-        }
-    }
 
     /**
      * 根据权重获取随机区间返回ID
@@ -345,7 +334,7 @@ class Base
      * @param $array
      * @return bool
      */
-    public function pf_deep_in_array($value, $array)
+    public function pf_deep_in_array($array, $value)
     {
         foreach ($array as $item) {
             if (!is_array($item)) {
@@ -358,7 +347,7 @@ class Base
 
             if (in_array($value, $item)) {
                 return true;
-            } else if ($this->pf_deep_in_array($value, $item)) {
+            } else if ($this->pf_deep_in_array($item, $value)) {
                 return true;
             }
         }
@@ -415,7 +404,7 @@ class Base
      * @param bool $statue true or  false
      * @return bool
      */
-    public function pf_array_shuffle(&$array, $statue = false)
+    public function pf_array_shuffle($array, $statue = false)
     {
         $keys = array_keys($array);
         shuffle($keys);
@@ -426,8 +415,7 @@ class Base
             }
             $new[$key] = $array[$key];
         }
-        $array = $new;
-        return true;
+        return $new;
     }
 
     /**

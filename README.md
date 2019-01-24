@@ -12,11 +12,11 @@
 - pf_del_val()     删除数组中的某个值
 - pf_key_exists()   判断数组中是否有这个键
 - get()         根据键名获取数组中的某个值,支持点语法
-- pf_arr_sort() 数组冒泡排序
+- pf_arr_sort() 数组排序
 - pf_tree()        二级数组树结构化(不递归)
 - pf_get_tree()     多级数组结构化(不递归)
 - pf_array_unique()   多维数组去重 
-- array_depth()       检测数组的维度
+- pf_array_depth()       检测数组的维度
 - pf_encode()         数据格式转换
     支持 数组转 'json','xml','csv','serialize'
     
