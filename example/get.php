@@ -37,5 +37,5 @@ $arr = [
     'sex' => '女'
 ];
 
-PFarr::dd(PFarr::get($arr,'0.name.dd',0));
-PFarr::dd(PFarr::get($arr,'sex',0));
+PFarr::dd(PFarr::pf_get($arr,'0.name.dd',0));
+PFarr::dd(PFarr::pf_get($arr,'sex',0));

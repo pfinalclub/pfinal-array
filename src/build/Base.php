@@ -27,13 +27,13 @@ class Base
     }
 
     /**
-     * 根据键名获取值
+     * 根据键名获取值 支持点语法
      * @param array $data
      * @param $key
      * @param null $value
      * @return array|mixed|null
      */
-    public function get(array $data, $key, $value = null)
+    public function pf_get(array $data, $key, $value = null)
     {
         $exp = explode('.', $key);
         foreach ((array)$exp as $d) {
@@ -43,6 +43,26 @@ class Base
                 return $value;
             }
         }
+        return $data;
+    }
+
+    /**
+     * 设置数组元素值支持点语法
+     * @param array $data
+     * @param $key
+     * @param $value
+     * @return array
+     */
+    public function pf_set(array $data, $key, $value)
+    {
+        $tmp =& $data;
+        foreach (explode('.', $key) as $d) {
+            if (!isset($tmp[$d])) {
+                $tmp[$d] = [];
+            }
+            $tmp = &$tmp[$d];
+        }
+        $tmp = $value;
         return $data;
     }
 
