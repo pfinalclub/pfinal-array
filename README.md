@@ -1,7 +1,9 @@
 # pfinal-array
 
-![](https://img.shields.io/apm/l/vim-mode.svg)
-[![](https://img.shields.io/badge/Downloads-4k-red.svg)](https://packagist.org/packages/nancheng/pfinal-array)
+![](https://img.shields.io/github/issues/pfinalclub/pfinal-array?style=flat-square)
+![](https://img.shields.io/github/forks/pfinalclub/pfinal-array?style=flat-square)
+![](https://img.shields.io/github/stars/pfinalclub/pfinal-array?style=flat-square)
+![](https://img.shields.io/github/license/pfinalclub/pfinal-array?style=flat-square)
 
 **Note:** ```PHP``` ```PHPArray``` ```Validator```
 
