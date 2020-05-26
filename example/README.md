@@ -14,7 +14,7 @@
 
 - get()  点语法获取数组中的某个值
 
-> 例子: [get()](./get.php)
+> 例子: [get()](pf_get.php)
 
 - pf_key_exists() 多维数组检测键是否存在
 

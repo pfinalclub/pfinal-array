@@ -120,8 +120,8 @@ class Base
     public function pf_arr_sort($arr)
     {
         $len = count($arr);
-        for ($i = 1; $i < $len; $i++) {
-            for ($k = 0; $k < $len - $i; $k++) {
+        for ($i = 1; $i < $len; $i ++) {
+            for ($k = 0; $k < $len - $i; $k ++) {
                 if (is_array($arr[$k + 1])) {
                     $arr[$k + 1] = $this->pf_arr_sort($arr[$k + 1]);
                 } else {
@@ -204,7 +204,7 @@ class Base
      */
     public function pf_array_unique($arr)
     {
-        $dime = $this->array_depth($arr);
+        $dime = $this->pf_array_depth($arr);
         if ($dime <= 1) {
             $data = array_unique($arr);
         } else {
@@ -222,7 +222,6 @@ class Base
         }
         return $data;
     }
-
 
     /**
      * 检测数组的维度
@@ -411,7 +410,7 @@ class Base
             if (!is_array($weight)) {
                 return false;
             }
-            for ($i = 0; $i < $weight[1]; ++$i) {
+            for ($i = 0; $i < $weight[1]; ++ $i) {
                 $options[] = $weight[0];
             }
         }
@@ -474,29 +473,6 @@ class Base
     public function pf_array_diff_both($array, $array1)
     {
         return array_merge(array_diff($array, $array1), array_diff($array1, $array));
-    }
-
-    /**
-     * 获取指定数组的标签云
-     * @param array $data
-     * @param int $minFontSize
-     * @param int $maxFontSize
-     * @return string
-     */
-    public function pf_getCloud($data = array(), $minFontSize = 12, $maxFontSize = 30)
-    {
-        $minimumCount = min(array_values($data));
-        $maximumCount = max(array_values($data));
-        $spread = $maximumCount - $minimumCount;
-        $cloudTags = array();
-        $spread == 0 && $spread = 1; // 假如等于0，则强制为1
-        foreach ($data as $tag => $count) {
-            $color = 'rgb(' . rand(0, 255) . ',' . rand(0, 255) . ',' . rand(0, 255) . ')';
-            $size = $minFontSize + ($count - $minimumCount) * ($maxFontSize - $minFontSize) / $spread;
-            $cloudTags[] = '<a style="display:block;margin-left:10px;margin-top:' . rand(-5, 5) . 'px;float:left;color:' . $color . ';text-decoration:none;font-size: ' . floor($size) . 'px' . '" href="#" title="' . $tag . '' . $count . '">' . htmlspecialchars(stripslashes($tag)) . '</a>';
-        }
-
-        return join("", $cloudTags);
     }
 
     /**
@@ -569,40 +545,6 @@ class Base
     }
 
     /**
-     * 组词算法
-     * @param $arr
-     * @param $m
-     * @return array
-     */
-    public function pf_diy_words($arr, $m)
-    {
-        $result = array();
-        if ($m == 1) {//只剩一个词时直接返回
-            return $arr;
-        }
-        if ($m == count($arr)) {
-            $result[] = implode('', $arr);
-            return $result;
-        }
-
-        $temp_firstelement = $arr[0];
-        unset($arr[0]);
-        $arr = array_values($arr);
-        $temp_list1 = $this->pf_diy_words($arr, ($m - 1));
-
-        foreach ($temp_list1 as $s) {
-            $s = $temp_firstelement . $s;
-            $result[] = $s;
-        }
-
-        $temp_list2 = $this->pf_diy_words($arr, $m);
-        foreach ($temp_list2 as $s) {
-            $result[] = $s;
-        }
-        return $result;
-    }
-
-    /**
      * 统计数组元素出现的次数
      * @return array|bool
      */
@@ -612,10 +554,10 @@ class Base
         $num = func_num_args();
         $result = array();
         if ($num > 0) {
-            for ($i = 0; $i < $num; $i++) {
+            for ($i = 0; $i < $num; $i ++) {
                 foreach ($data[$i] as $v) {
                     if (isset($result[$v])) {
-                        $result[$v]++;
+                        $result[$v] ++;
                     } else {
                         $result[$v] = 1;
                     }
@@ -641,7 +583,7 @@ class Base
         }
         $result = [];
         foreach ($array as $element) {
-            if (!array_key_exists($from, $element) OR !array_key_exists($to, $element)) {
+            if (!array_key_exists($from, $element) or !array_key_exists($to, $element)) {
                 continue;
             }
             $key = $element[$from];
@@ -748,6 +690,59 @@ class Base
             $arr = array_filter($arr);
         }
         return $arr;
+    }
+
+    /**
+     * 使用给定闭包对数组进行过滤
+     * @param $array
+     * @param callable $callback
+     * @return array
+     */
+    public function pf_array_where($array, callable $callback)
+    {
+        return array_filter($array, $callback, ARRAY_FILTER_USE_BOTH);
+    }
+
+    /**
+     * 获取数组第一个元素
+     * @param $array
+     * @param callable|null $callback
+     * @param null $default
+     * @return mixed
+     */
+    public function pf_array_first($array, callable $callback = null, $default = null)
+    {
+        if (is_null($callback)) {
+            if (empty($array)) {
+                return value($default);
+            }
+
+            foreach ($array as $item) {
+                return $item;
+            }
+        }
+        foreach ($array as $key => $value) {
+            if (call_user_func($callback, $value, $key)) {
+                return $value;
+            }
+        }
+        return value($default);
+    }
+
+    /**
+     * 获取数组最后一个元素
+     * @param $array
+     * @param callable|null $callback
+     * @param null $default
+     * @return mixed
+     */
+    public function pf_array_last($array, callable $callback = null, $default = null)
+    {
+        if (is_null($callback)) {
+            return empty($array) ? value($default) : end($array);
+        }
+
+        return self::pf_array_first(array_reverse($array, true), $callback, $default);
     }
 
     /**
