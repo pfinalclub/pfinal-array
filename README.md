@@ -59,9 +59,7 @@
 
     require './vendor/autoload.php';
     use pf\arr\PFarr;
-    
-    PFarr::pf_array_unique($arr);
-    PFarr::pf_array_col
+    // 调用方法
 ```
 
 ## 例子
