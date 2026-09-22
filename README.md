@@ -279,4 +279,4 @@ composer install
 composer test
 ```
 
-库本身要求 PHP >= 8.0。测试使用 PHPUnit 11，运行测试需要 PHP >= 8.2。
+库本身要求 PHP >= 8.0，没有生产依赖。测试使用 PHPUnit `^11.5.50`，运行测试需要 PHP >= 8.2。
